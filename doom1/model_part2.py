@@ -119,8 +119,7 @@ class AncientFruit:
 class SDVMode:
     @property
     def starting_pesos(self) -> int:
-        # return 400
-        return 7000
+        return 400
     @property
     def grid_size(self) -> tuple[int, int]:
         return 9, 9
