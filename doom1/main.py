@@ -9,8 +9,8 @@ from controller import Controller
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument("--mode", type=str)
-    parser.add_argument("--water", type=str)
+    parser.add_argument("--mode", type=str, required=True)
+    parser.add_argument("--water", type=str, required=True)
     args = parser.parse_args()
 
     mode: SeedPacketMode = ACMode()
