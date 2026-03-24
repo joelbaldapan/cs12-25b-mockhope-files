@@ -48,7 +48,6 @@ class Controller:
                 case Command.HARVEST:
                     if not self._model.harvest_all():
                         self._view.print_failed()
-                        self._view.print_new_line()
                         continue
                     self._view.print_success()
 
@@ -60,7 +59,6 @@ class Controller:
                 case Command.NEXT_DAY:
                     self._model.next_day()
                     self._view.print_day_ended()
-                    self._view.print_new_line()
                     self._view.print_day(self._model.get_day())
                     self._view.print_grid(
                         self._model.get_pesos(), self._model.get_grid()
